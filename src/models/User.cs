@@ -8,14 +8,10 @@ namespace api02.src.models
 {
     public class User
     {
-        public int id {get; set;} 
-
-        public string nombre {get; set;} = string.Empty;
-
-        public string correo {get; set;} = string.Empty;
-
-        public DateOnly fechaNacimiento {get; set;} = new DateOnly();
-
-        public Genero Genero {get; set;} = null!; 
+        public int Id {get; set;}
+        public string Nombre {get; set;} = string.Empty;
+        public string Correo {get; set;} = string.Empty;
+        public DateOnly FechaNacimiento {get; set;} = new DateOnly();
+        public string Genero {get; set;} = string.Empty; 
     }
 }
