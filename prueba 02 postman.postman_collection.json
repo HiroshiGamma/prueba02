@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "543962ab-219a-43a8-89cf-ca4c6d541924",
+		"name": "prueba 02 postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36340634"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5091/api/User/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:5091/api/User"
+			},
+			"response": []
+		}
+	]
+}
