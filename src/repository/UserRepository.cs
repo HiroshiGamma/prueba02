@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api02.src.data;
+using api02.src.Dto;
 using api02.src.interfaces;
 using api02.src.models;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,6 @@ namespace api02.src.repository
 
         public async Task<User> Post(User user)
         {
-
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;

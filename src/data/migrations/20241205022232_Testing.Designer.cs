@@ -11,8 +11,8 @@ using api02.src.data;
 namespace api02.src.data.migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20241205020942_AddSeeders")]
-    partial class AddSeeders
+    [Migration("20241205022232_Testing")]
+    partial class Testing
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

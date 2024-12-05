@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using api02.src.interfaces;
 using api02.src.models;
 using Microsoft.AspNetCore.Mvc;
+using api02.src.Dto;
+using api02.src.Mappers;
 
 namespace api02.src.controller
 {   
@@ -30,8 +32,14 @@ namespace api02.src.controller
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] User user)
+        public async Task<IActionResult> Post([FromBody] CreateUserDto createUserDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var user = createUserDto.ToUser();
             var newUser = await _userRepository.Post(user);
             return CreatedAtAction(nameof(GetAllUsers), new { id = newUser.Id }, newUser);
         }
